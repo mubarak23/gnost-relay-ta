@@ -234,6 +234,20 @@ func main() {
 				} else {
 					// Upgrade successful! Break to main websocket handler.
 					handshake = &hs
+
+				// 	validateError := middleware.validateNoStrEventMiddleware(func(w http.ResponseWriter, r *http.Request, payload RequestPayload) RequestPayload {
+        //     // Your logic for handling the validated payload goes here
+        //     // Call your next WebSocket handler or process the payload as needed
+        //     return payload
+        // })(w, handshake.Request)
+
+        // if validateError != nil {
+        //     // Handle validation error...
+        //     conn.Close()
+        //     return
+        // }
+				
+
 					break
 				}
 			}
